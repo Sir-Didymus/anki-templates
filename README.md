@@ -1,3 +1,3 @@
-# Anki-Templates
+# anki-templates
 
 My personal Anki templates.
