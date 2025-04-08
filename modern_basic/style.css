@@ -4,6 +4,7 @@
 :root {
   --card-max-width: 40em;
   --card-text-align: left;
+  --line-height: 1.5;
   --font-size-regular: 20px;
   --font-size-small: 14px;
   --font-family: arial;
@@ -13,18 +14,18 @@
 
 /* light mode */
 .card {
+  background-color: white;
   --card-background-color: white;
   --divider-background-color: #222222;
-
   --text-fg: #222222;
   --text-fg-faint: #5a5a5a;
 }
 
 /* dark mode */
 .card.nightMode {
+  background-color: #1e1e1e;
   --card-background-color: #1e1e1e;
   --divider-background-color: #e0e0e0;
-
   --text-fg: #ebebeb;
   --text-fg-faint: #b7b7b7;
 }
@@ -39,7 +40,7 @@
   color: var(--text-fg);
   font-family: var(--font-family);
   font-size: var(--font-size-regular);
-  line-height: 1.5;
+  line-height: var(--line-height);
 }
 
 /* ----- Divider ----- */

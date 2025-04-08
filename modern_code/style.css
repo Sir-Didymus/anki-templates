@@ -4,6 +4,7 @@
 :root {
   --card-max-width: 40em;
   --card-text-align: left;
+  --line-height: 25px;
   --font-size-regular: 15px;
   --font-size-small: 14px;
   --font-family:
@@ -43,7 +44,7 @@
 
   font-family: var(--font-family);
   font-size: var(--font-size-regular);
-  line-height: 25px;
+  line-height: var(--line-height);
   font-variant-ligatures: none;
 }
 
