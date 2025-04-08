@@ -1,0 +1,28 @@
+<!-- Back html for the modern_basic_type note type -->
+
+<div class="deck">{{Deck}}</div>
+
+<div>{{Front}}</div>
+
+<hr id=answer>
+
+<div class=type>
+  {{type:Back}}
+</div>
+
+{{#Back Extra}}
+  <div class=back-extra>
+    {{Back Extra}}
+  </div>
+{{/Back Extra}}
+
+<script>
+  // Breadcrumbs to current deck
+  var deckEl = document.querySelector(".deck");
+  var subDecks = deckEl.innerHTML.split("::").filter(Boolean);
+  html = [];
+  subDecks.forEach((subDeck) => {
+    html.push("<span class='subdeck'>" + subDeck + "</span>");
+  });
+  deckEl.innerHTML = html.join("&nbsp;/&nbsp;");
+</script>
