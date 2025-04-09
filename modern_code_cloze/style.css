@@ -1,0 +1,133 @@
+/* ----- Style for the modern_code_cloze note type ----- */
+
+/* ----- General Settings ----- */
+:root {
+  --card-max-width: 40em;
+  --card-text-align: left;
+  --line-height: 25px;
+  --font-size-regular: 15px;
+  --font-size-small: 14px;
+  --font-family:
+    'jetbrains_mono_bundled',
+    "JetBrains Mono";
+}
+
+/* ----- Colors ----- */
+
+/* light mode */
+.card {
+  background-color: white;
+  --card-background-color: white;
+  --divider-background-color: #222222;
+  --text-fg: #222222;
+  --text-fg-faint: #5a5a5a;
+}
+
+/* dark mode */
+.card.nightMode {
+  background-color: #1e1e1e;
+  --card-background-color: #1e1e1e;
+  --divider-background-color: #e0e0e0;
+  --text-fg: #ebebeb;
+  --text-fg-faint: #b7b7b7;
+}
+
+/* ----- Card settings ----- */
+.card {
+  margin: clamp(20px, 8vh, 40px) auto;
+  padding: 0 20px;
+  max-width: 80ch;
+  text-align: var(--card-text-align);
+
+  background-color: var(--card-background-color);
+  color: var(--text-fg);
+
+  font-family: var(--font-family);
+  font-size: var(--font-size-regular);
+  line-height: var(--line-height);
+  font-variant-ligatures: none;
+}
+
+/* ----- Divider ----- */
+hr {
+  all: unset;
+  display: block;
+  margin: clamp(0.75em, 6vh, 1.5em) 0;
+  height: 1.5px;
+  background-color: var(--divider-background-color);
+}
+
+/* ----- Deck indicator ----- */
+.deck {
+  margin-bottom: 2em;
+  display: flex;
+  white-space: nowrap;
+
+  color: var(--text-fg-faint);
+  font-size: var(--font-size-small);
+}
+
+.mobile.deck {
+  margin: 1em;
+}
+
+.subdeck {
+  text-decoration: underline;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* ----- Back Extra ----- */
+.back-extra {
+  margin-top: clamp(1.5em, 11vh, 3em);
+  font-size: 90%;
+  color: var(--text-fg-faint);
+}
+
+/* ----- Text ----- */
+.text {
+  border-left: 2px solid #666666;
+  margin-left: 2px;
+  padding-left: calc(1ch - 4px);
+}
+
+/* ----- Type ----- */
+#typeans {
+  border: none;
+  font-family: var(--font-family) !important;
+  font-size: var(--font-size-regular);
+  font-variant-ligatures: none;
+  color: white;
+  background-color: #505050;
+}
+
+.type {
+  margin: 0 -2px;
+}
+.typeGood {
+  color: white;
+  background-color: #38600a;
+}
+.typeBad {
+  color: white;
+  background-color: #7d2e22  ;
+}
+.typeMissed {
+  color: white;
+  background-color: #5c5c5c;
+}
+
+/* ----- Cloze Color ----- */
+.cloze {
+  font-weight: 900;
+  color: white;
+  background-color: #505050;
+}
+
+/* ----- Custom Fonts ----- */
+@font-face {
+  font-family: 'jetbrains_mono_bundled';
+  src: url('_JetBrainsMonowght.ttf');
+  font-weight: 200 900;
+  font-style: normal;
+}
