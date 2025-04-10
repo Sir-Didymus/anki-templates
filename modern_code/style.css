@@ -117,6 +117,15 @@ hr {
   background-color: #5c5c5c;
 }
 
+code {
+  color: var(--text-fg);
+  background-color: #696969;
+  border-radius: 4px;
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+}
+
 /* ----- Custom Fonts ----- */
 @font-face {
   font-family: 'jetbrains_mono_bundled';
