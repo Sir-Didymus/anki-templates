@@ -1,13 +1,22 @@
 <!-- Back html for the modern_basic note type -->
 
-<div>{{FrontSide}}</div>
+<div class="modern">
+  <div class="modern-deck">{{Deck}}</div>
+  <div class="Modern-front">{{Front}}</div>
+  <hr id="answer" />
+  <div class="modern-back">{{Back}}</div>
+  {{#Back Extra}}
+  <div class="modern-back-extra">{{Back Extra}}</div>
+  {{/Back Extra}}
+</div>
 
-<hr id=answer>
-
-<div>{{Back}}</div>
-
-{{#Back Extra}}
-  <div class=back-extra>
-    {{Back Extra}}
-  </div>
-{{/Back Extra}}
+<script>
+  // Breadcrumbs to current deck
+  var deckEl = document.querySelector(".modern-deck");
+  var subDecks = deckEl.innerHTML.split("::").filter(Boolean);
+  html = [];
+  subDecks.forEach((subDeck) => {
+    html.push("<span class='modern-subdeck'>" + subDeck + "</span>");
+  });
+  deckEl.innerHTML = html.join("&nbsp;/&nbsp;");
+</script>

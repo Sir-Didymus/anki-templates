@@ -2,45 +2,81 @@
 
 /* ----- General Settings ----- */
 :root {
-  --card-max-width: 40em;
-  --card-text-align: left;
+  --max-width: 600px;
+  --text-align: left;
   --line-height: 1.5;
   --font-size-regular: 20px;
   --font-size-small: 14px;
   --font-family: arial;
+  --font-family-code: "jetbrains_mono_bundled", "JetBrains Mono";
+}
+
+/* ----- Catpuccin Color Scheme ----- */
+:root {
+  /* Catpuccin Latte */
+  --catpuccin-latte-base: ##eff1f5;
+  --catpuccin-latte-surface-0: #ccd0da;
+  --catpuccin-latte-overlay-0: #9ca0b0;
+  --catpuccin-latte-overlay-1: #8c8fa1;
+  --catpuccin-latte-overlay-2: #7c7f93;
+  --catpuccin-latte-text: #4c4f69;
+  --catpuccin-latte-subtext-0: #6c6f85;
+  --catpuccin-latte-subtext-1: #5c5f77;
+
+  /* Catpuccin Mocha */
+  --catpuccin-mocha-base: #1e1e2e;
+  --catpuccin-mocha-surface-0: #313244;
+  --catpuccin-mocha-overlay-0: #6c7086;
+  --catpuccin-mocha-overlay-1: #7f849c;
+  --catpuccin-mocha-overlay-2: #9399b2;
+  --catpuccin-mocha-text: #cdd6f4;
+  --catpuccin-mocha-subtext-0: #a6adc8;
+  --catpuccin-mocha-subtext-1: #bac2de;
 }
 
 /* ----- Colors ----- */
 
-/* light mode */
 .card {
-  background-color: white;
-  --card-background-color: white;
-  --divider-background-color: #222222;
-  --text-fg: #222222;
-  --text-fg-faint: #5a5a5a;
+  /* light mode */
+  background-color: var(--catpuccin-latte-base);
+  --bg-color-primary: var(--catpuccin-latte-base);
+  --bg-color-secondary: var(--catpuccin-latte-surface-0);
+  --divider-bg: var(--catpuccin-latte-overlay-2);
+  --text-fg: var(--catpuccin-latte-text);
+  --text-fg-subtle: var(--catpuccin-latte-overlay-1);
+  --subtext-1: var(var(--catpuccin-latte-subtext-1));
+  --text-bg-selected: var(--catpuccin-latte-overlay-2);
 }
 
-/* dark mode */
 .card.nightMode {
-  background-color: #1e1e1e;
-  --card-background-color: #1e1e1e;
-  --divider-background-color: #e0e0e0;
-  --text-fg: #ebebeb;
-  --text-fg-faint: #b7b7b7;
+  /* dark mode */
+  background-color: var(--catpuccin-mocha-base);
+  --bg-color-primary: var(--catpuccin-mocha-base);
+  --bg-color-secondary: var(--catpuccin-mocha-surface-0);
+  --divider-bg: var(--catpuccin-latte-overlay-2);
+  --text-fg: var(--catpuccin-mocha-text);
+  --text-fg-subtle: var(--catpuccin-mocha-overlay-1);
+  --subtext-1: var(var(--catpuccin-mocha-subtext-1));
+  --text-bg-selected: var(--catpuccin-mocha-overlay-2);
 }
 
-/* ----- Card settings ----- */
+/* ----- Card Settings ----- */
 .card {
   margin: clamp(20px, 8vh, 40px) auto;
   padding: 0 20px;
-  max-width: 600px;
-  text-align: var(--card-text-align);
-  background-color: var(--card-background-color);
+  max-width: var(--max-width);
+  text-align: var(--text-align);
+  background-color: var(--bg-color-primary);
   color: var(--text-fg);
   font-family: var(--font-family);
   font-size: var(--font-size-regular);
   line-height: var(--line-height);
+}
+
+/* ----- Text Selection ----- */
+::selection {
+  background-color: var(--text-bg-selected);
+  color: var(--text-fg);
 }
 
 /* ----- Divider ----- */
@@ -49,32 +85,50 @@ hr {
   display: block;
   margin: clamp(0.75em, 6vh, 1.5em) 0;
   height: 1.5px;
-  background-color: var(--divider-background-color);
+  background-color: var(--divider-bg);
 }
 
 /* ----- Deck indicator ----- */
-.deck {
+.modern-deck {
   margin-bottom: 2em;
   display: flex;
   white-space: nowrap;
 
-  color: var(--text-fg-faint);
+  color: var(--subtext-1);
   font-size: var(--font-size-small);
 }
 
-.mobile.deck {
+.mobile.modern-deck {
   margin: 1em;
 }
 
-.subdeck {
+.modern-subdeck {
   text-decoration: underline;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
 /* ----- Back Extra ----- */
-.back-extra {
+.modern-back-extra {
   margin-top: clamp(1.5em, 11vh, 3em);
   font-size: 90%;
-  color: var(--text-fg-faint);
+  color: var(--text-fg);
+}
+
+/* ----- Inline Code ----- */
+code {
+  background-color: var(--bg-color-secondary);
+  color: var(--text-fg);
+  padding: 0.1em 0.2em;
+  border-radius: 3px;
+  font-size: 80%;
+  font-family: var(--font-family-code);
+}
+
+/* ----- Custom Fonts ----- */
+@font-face {
+  font-family: "jetbrains_mono_bundled";
+  src: url("_JetBrainsMonowght.ttf");
+  font-weight: 200 900;
+  font-style: normal;
 }
