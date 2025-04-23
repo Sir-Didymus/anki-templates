@@ -7,7 +7,8 @@
   --line-height: 1.5;
   --font-size-regular: 20px;
   --font-size-small: 14px;
-  --font-family: arial;
+  --font-family-serif: "noto_serif_bundled";
+  --font-family-sans: "noto_sans_bundled";
   --font-family-code: "jetbrains_mono_bundled", "JetBrains Mono";
 }
 
@@ -22,6 +23,7 @@
   --catpuccin-latte-text: #4c4f69;
   --catpuccin-latte-subtext-0: #6c6f85;
   --catpuccin-latte-subtext-1: #5c5f77;
+  --catpuccin-latte-blue: #1e66f5;
 
   /* Catpuccin Mocha */
   --catpuccin-mocha-base: #1e1e2e;
@@ -32,6 +34,7 @@
   --catpuccin-mocha-text: #cdd6f4;
   --catpuccin-mocha-subtext-0: #a6adc8;
   --catpuccin-mocha-subtext-1: #bac2de;
+  --catpuccin-mocha-blue: #89b4fa;
 }
 
 /* ----- Colors ----- */
@@ -41,11 +44,12 @@
   background-color: var(--catpuccin-latte-base);
   --bg-color-primary: var(--catpuccin-latte-base);
   --bg-color-secondary: var(--catpuccin-latte-surface-0);
-  --divider-bg: var(--catpuccin-latte-overlay-2);
-  --text-fg: var(--catpuccin-latte-text);
-  --text-fg-subtle: var(--catpuccin-latte-overlay-1);
-  --subtext-1: var(var(--catpuccin-latte-subtext-1));
-  --text-bg-selected: var(--catpuccin-latte-overlay-2);
+  --divider-bg-color: var(--catpuccin-latte-overlay-2);
+  --text-color: var(--catpuccin-latte-text);
+  --text-color-subtle: var(--catpuccin-latte-overlay-1);
+  --subtext-color: var(var(--catpuccin-latte-subtext-1));
+  --selected-text-bg-color: var(--catpuccin-latte-overlay-2);
+  --color-blue: var(--catpuccin-latte-blue);
 }
 
 .card.nightMode {
@@ -53,11 +57,12 @@
   background-color: var(--catpuccin-mocha-base);
   --bg-color-primary: var(--catpuccin-mocha-base);
   --bg-color-secondary: var(--catpuccin-mocha-surface-0);
-  --divider-bg: var(--catpuccin-latte-overlay-2);
-  --text-fg: var(--catpuccin-mocha-text);
-  --text-fg-subtle: var(--catpuccin-mocha-overlay-1);
-  --subtext-1: var(var(--catpuccin-mocha-subtext-1));
-  --text-bg-selected: var(--catpuccin-mocha-overlay-2);
+  --divider-bg-color: var(--catpuccin-latte-overlay-2);
+  --text-color: var(--catpuccin-mocha-text);
+  --text-color-subtle: var(--catpuccin-mocha-overlay-1);
+  --subtext-color: var(var(--catpuccin-mocha-subtext-1));
+  --selected-text-bg-color: var(--catpuccin-mocha-overlay-2);
+  --color-blue: var(--catpuccin-mocha-blue);
 }
 
 /* ----- Card Settings ----- */
@@ -67,16 +72,16 @@
   max-width: var(--max-width);
   text-align: var(--text-align);
   background-color: var(--bg-color-primary);
-  color: var(--text-fg);
-  font-family: var(--font-family);
+  color: var(--text-color);
+  font-family: var(--font-family-serif);
   font-size: var(--font-size-regular);
   line-height: var(--line-height);
 }
 
 /* ----- Text Selection ----- */
 ::selection {
-  background-color: var(--text-bg-selected);
-  color: var(--text-fg);
+  background-color: var(--selected-text-bg-color);
+  color: var(--text-color);
 }
 
 /* ----- Divider ----- */
@@ -85,7 +90,7 @@ hr {
   display: block;
   margin: clamp(0.75em, 6vh, 1.5em) 0;
   height: 1.5px;
-  background-color: var(--divider-bg);
+  background-color: var(--divider-bg-color);
 }
 
 /* ----- Deck indicator ----- */
@@ -93,8 +98,8 @@ hr {
   margin-bottom: 2em;
   display: flex;
   white-space: nowrap;
-
-  color: var(--subtext-1);
+  color: var(--subtext-color);
+  font-family: var(--font-family-sans);
   font-size: var(--font-size-small);
 }
 
@@ -112,13 +117,13 @@ hr {
 .modern-back-extra {
   margin-top: clamp(1.5em, 11vh, 3em);
   font-size: 90%;
-  color: var(--text-fg);
+  color: var(--text-color);
 }
 
 /* ----- Inline Code ----- */
 code {
   background-color: var(--bg-color-secondary);
-  color: var(--text-fg);
+  color: var(--text-color);
   padding: 0.1em 0.2em;
   border-radius: 3px;
   font-size: 80%;
@@ -128,7 +133,17 @@ code {
 /* ----- Custom Fonts ----- */
 @font-face {
   font-family: "jetbrains_mono_bundled";
-  src: url("_JetBrainsMonowght.ttf");
+  src: url("_jetbrains_mono.ttf");
   font-weight: 200 900;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "noto_serif_bundled";
+  src: url("_noto_serif.ttf");
+}
+
+@font-face {
+  font-family: "noto_sans_bundled";
+  src: url("_noto_sans.ttf");
 }
