@@ -7,62 +7,35 @@
   --line-height: 1.5;
   --font-size-regular: 20px;
   --font-size-small: 14px;
-  --font-family-serif: "noto_serif_bundled";
-  --font-family-sans: "noto_sans_bundled";
+  --font-family-serif: "noto_serif_bundled", "Noto Serif";
+  --font-family-sans: "noto_sans_bundled", "Noto Sans";
   --font-family-code: "jetbrains_mono_bundled", "JetBrains Mono";
-}
-
-/* ----- Catpuccin Color Scheme ----- */
-:root {
-  /* Catpuccin Latte */
-  --catpuccin-latte-base: ##eff1f5;
-  --catpuccin-latte-surface-0: #ccd0da;
-  --catpuccin-latte-overlay-0: #9ca0b0;
-  --catpuccin-latte-overlay-1: #8c8fa1;
-  --catpuccin-latte-overlay-2: #7c7f93;
-  --catpuccin-latte-text: #4c4f69;
-  --catpuccin-latte-subtext-0: #6c6f85;
-  --catpuccin-latte-subtext-1: #5c5f77;
-  --catpuccin-latte-blue: #1e66f5;
-
-  /* Catpuccin Mocha */
-  --catpuccin-mocha-base: #1e1e2e;
-  --catpuccin-mocha-surface-0: #313244;
-  --catpuccin-mocha-overlay-0: #6c7086;
-  --catpuccin-mocha-overlay-1: #7f849c;
-  --catpuccin-mocha-overlay-2: #9399b2;
-  --catpuccin-mocha-text: #cdd6f4;
-  --catpuccin-mocha-subtext-0: #a6adc8;
-  --catpuccin-mocha-subtext-1: #bac2de;
-  --catpuccin-mocha-blue: #89b4fa;
 }
 
 /* ----- Colors ----- */
 
 .card {
   /* light mode */
-  background-color: var(--catpuccin-latte-base);
-  --bg-color-primary: var(--catpuccin-latte-base);
-  --bg-color-secondary: var(--catpuccin-latte-surface-0);
-  --divider-bg-color: var(--catpuccin-latte-overlay-2);
-  --text-color: var(--catpuccin-latte-text);
-  --text-color-subtle: var(--catpuccin-latte-overlay-1);
-  --subtext-color: var(var(--catpuccin-latte-subtext-1));
-  --selected-text-bg-color: var(--catpuccin-latte-overlay-2);
-  --color-blue: var(--catpuccin-latte-blue);
+  --bg-color-primary: ##eff1f5;
+  --bg-color-secondary: #ccd0da;
+  --divider-bg-color: #7c7f93;
+  --text-color: #4c4f69;
+  --text-color-subtle: #8c8fa1;
+  --subtext-color: #5c5f77;
+  --selected-text-bg-color: #7c7f93;
+  background-color: var(--bg-color-primary);
 }
 
 .card.nightMode {
   /* dark mode */
-  background-color: var(--catpuccin-mocha-base);
-  --bg-color-primary: var(--catpuccin-mocha-base);
-  --bg-color-secondary: var(--catpuccin-mocha-surface-0);
-  --divider-bg-color: var(--catpuccin-latte-overlay-2);
-  --text-color: var(--catpuccin-mocha-text);
-  --text-color-subtle: var(--catpuccin-mocha-overlay-1);
-  --subtext-color: var(var(--catpuccin-mocha-subtext-1));
-  --selected-text-bg-color: var(--catpuccin-mocha-overlay-2);
-  --color-blue: var(--catpuccin-mocha-blue);
+  --bg-color-primary: #1e1e2e;
+  --bg-color-secondary: #313244;
+  --divider-bg-color: #9399b2;
+  --text-color: #cdd6f4;
+  --text-color-subtle: #7f849c;
+  --subtext-color: #bac2de;
+  --selected-text-bg-color: #9399b2;
+  background-color: var(--bg-color-primary);
 }
 
 /* ----- Card Settings ----- */
@@ -134,8 +107,6 @@ code {
 @font-face {
   font-family: "jetbrains_mono_bundled";
   src: url("_jetbrains_mono.ttf");
-  font-weight: 200 900;
-  font-style: normal;
 }
 
 @font-face {
