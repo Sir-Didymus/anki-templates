@@ -1,14 +1,13 @@
 <!-- Front html for the modern_cloze note type -->
 
-<div class="deck">{{Deck}}</div>
-
-<div>
-  {{cloze:Text}}
+<div class="modern">
+  <div class="modern-deck">{{Deck}}</div>
+  <div>{{cloze:Text}}</div>
 </div>
 
 <script>
   // Breadcrumbs to current deck
-  var deckEl = document.querySelector(".deck");
+  var deckEl = document.querySelector(".modern-deck");
   var subDecks = deckEl.innerHTML.split("::").filter(Boolean);
   html = [];
   subDecks.forEach((subDeck) => {

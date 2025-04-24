@@ -1,22 +1,18 @@
 <!-- Back html for the modern_cloze note type -->
 
-<div class="deck">{{Deck}}</div>
+<div class="modern">
+  <div class="modern-deck">{{Deck}}</div>
+  <div>{{cloze:Text}}</div>
 
-<div>
-  {{cloze:Text}}
+  {{#Back Extra}}
+  <hr id="answer" />
+  <div class="modern-back-extra">{{Back Extra}}</div>
+  {{/Back Extra}}
 </div>
-
-{{#Back Extra}}
-  <hr id=answer>
-
-  <div class=back-extra>
-    {{Back Extra}}
-  </div>
-{{/Back Extra}}
 
 <script>
   // Breadcrumbs to current deck
-  var deckEl = document.querySelector(".deck");
+  var deckEl = document.querySelector(".modern-deck");
   var subDecks = deckEl.innerHTML.split("::").filter(Boolean);
   html = [];
   subDecks.forEach((subDeck) => {

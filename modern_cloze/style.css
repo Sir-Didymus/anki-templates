@@ -2,45 +2,59 @@
 
 /* ----- General Settings ----- */
 :root {
-  --card-max-width: 40em;
-  --card-text-align: left;
+  --max-width: 600px;
+  --text-align: left;
   --line-height: 1.5;
   --font-size-regular: 20px;
   --font-size-small: 14px;
-  --font-family: arial;
+  --font-family-serif: Georgia, serif, "Noto Serif", "noto_serif_bundled";
+  --font-family-sans: Arial, sans-serif, "Noto Sans", "noto_sans_bundled";
+  --font-family-code: "JetBrains Mono", "jetbrains_mono_bundled";
 }
 
 /* ----- Colors ----- */
 
-/* light mode */
 .card {
-  background-color: white;
-  --card-background-color: white;
-  --divider-background-color: #222222;
-  --text-fg: #222222;
-  --text-fg-faint: #5a5a5a;
+  /* light mode */
+  --bg-color-primary: ##eff1f5;
+  --bg-color-secondary: #ccd0da;
+  --divider-bg-color: #7c7f93;
+  --text-color: #4c4f69;
+  --text-color-subtle: #8c8fa1;
+  --subtext-color: #5c5f77;
+  --selected-text-bg-color: #7c7f93;
+  background-color: var(--bg-color-primary);
 }
 
-/* dark mode */
 .card.nightMode {
-  background-color: #1e1e1e;
-  --card-background-color: #1e1e1e;
-  --divider-background-color: #e0e0e0;
-  --text-fg: #ebebeb;
-  --text-fg-faint: #b7b7b7;
+  /* dark mode */
+  --bg-color-primary: #1e1e2e;
+  --bg-color-secondary: #313244;
+  --divider-bg-color: #9399b2;
+  --text-color: #cdd6f4;
+  --text-color-subtle: #7f849c;
+  --subtext-color: #bac2de;
+  --selected-text-bg-color: #9399b2;
+  background-color: var(--bg-color-primary);
 }
 
-/* ----- Card settings ----- */
+/* ----- Card Settings ----- */
 .card {
   margin: clamp(20px, 8vh, 40px) auto;
   padding: 0 20px;
-  max-width: 600px;
-  text-align: var(--card-text-align);
-  background-color: var(--card-background-color);
-  color: var(--text-fg);
-  font-family: var(--font-family);
+  max-width: var(--max-width);
+  text-align: var(--text-align);
+  background-color: var(--bg-color-primary);
+  color: var(--text-color);
+  font-family: var(--font-family-serif);
   font-size: var(--font-size-regular);
   line-height: var(--line-height);
+}
+
+/* ----- Text Selection ----- */
+::selection {
+  background-color: var(--selected-text-bg-color);
+  color: var(--text-color);
 }
 
 /* ----- Divider ----- */
@@ -49,34 +63,44 @@ hr {
   display: block;
   margin: clamp(0.75em, 6vh, 1.5em) 0;
   height: 1.5px;
-  background-color: var(--divider-background-color);
+  background-color: var(--divider-bg-color);
 }
 
 /* ----- Deck indicator ----- */
-.deck {
+.modern-deck {
   margin-bottom: 2em;
   display: flex;
   white-space: nowrap;
-
-  color: var(--text-fg-faint);
+  color: var(--subtext-color);
+  font-family: var(--font-family-sans);
   font-size: var(--font-size-small);
 }
 
-.mobile.deck {
+.mobile.modern-deck {
   margin: 1em;
 }
 
-.subdeck {
+.modern-subdeck {
   text-decoration: underline;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
 /* ----- Back Extra ----- */
-.back-extra {
+.modern-back-extra {
   margin-top: clamp(1.5em, 11vh, 3em);
   font-size: 90%;
-  color: var(--text-fg-faint);
+  color: var(--text-color);
+}
+
+/* ----- Inline Code ----- */
+code {
+  background-color: var(--bg-color-secondary);
+  color: var(--text-color);
+  padding: 0.1em 0.2em;
+  border-radius: 3px;
+  font-size: 80%;
+  font-family: var(--font-family-code);
 }
 
 /* ----- Cloze Color ----- */
@@ -87,3 +111,20 @@ hr {
 .nightMode .cloze {
   color: lightblue;
 }
+
+/* ----- Custom Fonts ----- */
+@font-face {
+  font-family: "jetbrains_mono_bundled";
+  src: url("_jetbrains_mono.ttf");
+}
+
+@font-face {
+  font-family: "noto_serif_bundled";
+  src: url("_noto_serif.ttf");
+}
+
+@font-face {
+  font-family: "noto_sans_bundled";
+  src: url("_noto_sans.ttf");
+}
+
