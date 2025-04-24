@@ -1,49 +1,42 @@
 <!-- Back html for the modern_code_cloze note type -->
 
-<div class="deck">{{Deck}}</div>
+<div class="modern">
+  <div class="modern-deck">{{Deck}}</div>
 
-<div class="text">
-  {{#Coding Language}}
-    In <b>{{Coding Language}}</b>,
-  {{/Coding Language}}
-
-  <div>
-    {{Action}}
+  <div class="modern-code-text">
+    {{#Coding Language}} In <b>{{Coding Language}}</b>, {{/Coding Language}}
+    <div>{{Action}}</div>
   </div>
-</div>
 
-<br>
+  {{#Code Context}}
+  <br />
+  <div>{{Code Context}}</div>
+  {{/Code Context}}
 
-{{#Code Context}}
-  <br>
-  {{Code Context}} 
-{{/Code Context}}
+  <br />
 
-<div>
-  {{cloze:Code}}
-</div>
+  <div>{{cloze:Code}}</div>
 
-<hr id="answer">
+  <hr id="answer" />
 
-{{type:cloze:Code}}
+  <div class="modern-type">{{type:cloze:Code}}</div>
 
-{{#Back Extra}}
-  <br>
-  <br>
-
-  <div class="text">
-    <span class="back-extra"> {{Back Extra}} </span>
+  {{#Back Extra}}
+  <br />
+  <br />
+  <div class="modern-code-text">
+    <span class="modern-back-extra"> {{Back Extra}} </span>
   </div>
-{{/Back Extra}}
-
+  {{/Back Extra}}
+</div>
 
 <script>
   // Breadcrumbs to current deck
-  var deckEl = document.querySelector(".deck");
+  var deckEl = document.querySelector(".modern-deck");
   var subDecks = deckEl.innerHTML.split("::").filter(Boolean);
   html = [];
   subDecks.forEach((subDeck) => {
-    html.push("<span class='subdeck'>" + subDeck + "</span>");
+    html.push("<span class='modern-subdeck'>" + subDeck + "</span>");
   });
   deckEl.innerHTML = html.join("&nbsp;/&nbsp;");
 </script>
