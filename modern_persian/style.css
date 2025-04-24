@@ -7,10 +7,10 @@
   --line-height: 1.5;
   --font-size-regular: 20px;
   --font-size-small: 14px;
-  --font-family-serif: "noto_serif_bundled", "Noto Serif";
-  --font-family-sans: "noto_sans_bundled", "Noto Sans";
-  --font-family-code: "jetbrains_mono_bundled", "JetBrains Mono";
-  --font-family-persian: "noto_sans_arabic_bundled", "Noto Sans";
+  --font-family-serif: Georgia, serif, "Noto Serif", "noto_serif_bundled";
+  --font-family-sans: Arial, sans-serif, "Noto Sans", "noto_sans_bundled";
+  --font-family-code: "JetBrains Mono", "jetbrains_mono_bundled";
+  --font-family-persian: "Noto Sans Arabic", "noto_sans_arabic_bundled", Roboto, sans-serif;
   --persian-text-color: red;
   --german-text-color: blue;
   --hint-text-color: #df8e1d;
