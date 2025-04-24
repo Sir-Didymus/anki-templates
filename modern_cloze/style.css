@@ -7,8 +7,8 @@
   --line-height: 1.5;
   --font-size-regular: 20px;
   --font-size-small: 14px;
-  --font-family-serif: Georgia, serif, "Noto Serif", "noto_serif_bundled";
-  --font-family-sans: Arial, sans-serif, "Noto Sans", "noto_sans_bundled";
+  --font-family-serif: Georgia, serif;
+  --font-family-sans: Arial, sans-serif;
   --font-family-code: "JetBrains Mono", "jetbrains_mono_bundled";
 }
 
@@ -117,14 +117,3 @@ code {
   font-family: "jetbrains_mono_bundled";
   src: url("_jetbrains_mono.ttf");
 }
-
-@font-face {
-  font-family: "noto_serif_bundled";
-  src: url("_noto_serif.ttf");
-}
-
-@font-face {
-  font-family: "noto_sans_bundled";
-  src: url("_noto_sans.ttf");
-}
-
