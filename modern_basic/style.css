@@ -23,6 +23,7 @@
   --text-color-subtle: #8c8fa1;
   --subtext-color: #5c5f77;
   --selected-text-bg-color: #7c7f93;
+  --italic-color: #7287fd;
   background-color: var(--bg-color-primary);
 }
 
@@ -35,6 +36,7 @@
   --text-color-subtle: #7f849c;
   --subtext-color: #bac2de;
   --selected-text-bg-color: #9399b2;
+  --italic-color: #b4befe;
   background-color: var(--bg-color-primary);
 }
 
@@ -101,6 +103,11 @@ code {
   border-radius: 3px;
   font-size: 80%;
   font-family: var(--font-family-code);
+}
+
+/* ----- Style ----- */
+i {
+  color: var(--italic-color);
 }
 
 /* ----- Custom Fonts ----- */

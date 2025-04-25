@@ -26,6 +26,7 @@
   --subtext-color: #5c5f77;
   --selected-text-bg-color: #7c7f93;
   --type-missed-color: #9ca0b0;
+  --italic-color: #7287fd;
   background-color: var(--bg-color-primary);
 }
 
@@ -39,6 +40,7 @@
   --subtext-color: #bac2de;
   --selected-text-bg-color: #9399b2;
   --type-missed-color: #6c7086;
+  --italic-color: #b4befe;
   background-color: var(--bg-color-primary);
 }
 
@@ -154,6 +156,11 @@ code#typeans {
   border-left: 2px solid #666666;
   margin-left: 2px;
   padding-left: calc(1ch - 4px);
+}
+
+/* ----- Style ----- */
+i {
+  color: var(--italic-color);
 }
 
 /* ----- Custom Fonts ----- */
