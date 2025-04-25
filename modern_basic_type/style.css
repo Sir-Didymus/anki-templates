@@ -94,7 +94,7 @@ hr {
 .modern-back-extra {
   margin-top: clamp(1.5em, 11vh, 3em);
   font-size: 90%;
-  color: var(--text-color);
+  color: var(--subtext-color);
 }
 
 /* ----- Inline Code ----- */
