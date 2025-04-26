@@ -1,0 +1,33 @@
+<!-- Back html for the modern_sentence_mining note type -->
+
+<div class="modern">
+  <div class="modern-deck">{{Deck}}</div>
+  <div class="modern-center">
+    <div>{{Image}}</div>
+
+    <div>{{Sentence Audio}}</div>
+
+    <div>{{Sentence}}</div>
+
+    <div>{{Word Audio}}</div>
+
+    <br />
+
+    <div class="modern-target-word">{{Target Word}}</div>
+
+    <hr id="answer" />
+
+    <div>{{Definition}}</div>
+  </div>
+</div>
+
+<script>
+  // Breadcrumbs to current deck
+  var deckEl = document.querySelector(".modern-deck");
+  var subDecks = deckEl.innerHTML.split("::").filter(Boolean);
+  html = [];
+  subDecks.forEach((subDeck) => {
+    html.push("<span class='modern-subdeck'>" + subDeck + "</span>");
+  });
+  deckEl.innerHTML = html.join("&nbsp;/&nbsp;");
+</script>
