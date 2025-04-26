@@ -1,5 +1,8 @@
 <!-- Back html for the modern_code_cloze note type -->
 
+<!-- Set highlight.js theme -->
+<link rel="stylesheet" href="_catppuccin-mocha.css">
+
 <div class="modern">
   <div class="modern-deck">{{Deck}}</div>
 
@@ -10,12 +13,16 @@
 
   {{#Code Context}}
   <br />
-  <div>{{Code Context}}</div>
+  <div>
+    <pre><code class="language-{{Coding Language}}">{{Code Context}}</code></pre>
+  </div>
   {{/Code Context}}
 
   <br />
 
-  <div>{{cloze:Code}}</div>
+  <div>
+    <pre><code class="language-{{Coding Language}}">{{cloze:Code}}</code></pre>
+  </div>
 
   <hr id="answer" />
 
