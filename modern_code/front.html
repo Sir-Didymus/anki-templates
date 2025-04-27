@@ -1,5 +1,8 @@
 <!-- Front html for the modern_code note type -->
 
+<!-- Set highlight.js theme -->
+<link rel="stylesheet" href="_catppuccin-mocha.css" />
+
 <div class="modern">
   <div class="modern-deck">{{Deck}}</div>
 
@@ -10,7 +13,9 @@
 
   {{#Code Context}}
   <br />
-  <div>{{Code Context}}</div>
+  <div>
+    <pre><code class="language-{{Highlight Language}}">{{Code Context}}</code></pre>
+  </div>
   {{/Code Context}}
 
   <br />

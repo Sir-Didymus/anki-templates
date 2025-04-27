@@ -109,6 +109,24 @@ code {
   font-family: var(--font-family-code);
 }
 
+/* ----- Block Code ----- */
+pre code {
+  background-color: var(--bg-color-secondary);
+  color: var(--text-color);
+  padding: 0.5em;
+  border-radius: 0; /* Remove rounded corners */
+  font-size: 80%;
+  font-family: var(--font-family-code);
+  white-space: pre; /* Ensure it maintains preformatted text */
+  display: block; /* Ensure it fills the container */
+  overflow-x: auto; /* Allow horizontal scrolling for long lines */
+}
+
+/* ----- Highlight.js ----- */
+.hljs {
+    background-color: var(--bg-color-secondary) !important;
+}
+
 /* ----- Type ----- */
 #typeans {
   border: none;

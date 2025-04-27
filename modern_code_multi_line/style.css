@@ -18,7 +18,7 @@
 
 .card {
   /* light mode */
-  --bg-color-primary: ##eff1f5;;
+  --bg-color-primary: ##eff1f5;
   --bg-color-secondary: #ccd0da;
   --divider-bg-color: #7c7f93;
   --text-color: #4c4f69;
@@ -32,7 +32,7 @@
 
 .card.nightMode {
   /* dark mode */
-  --bg-color-primary: #1e1e2e;;
+  --bg-color-primary: #1e1e2e;
   --bg-color-secondary: #313244;
   --divider-bg-color: #9399b2;
   --text-color: #cdd6f4;
@@ -109,6 +109,24 @@ code {
   font-family: var(--font-family-code);
 }
 
+/* ----- Block Code ----- */
+pre code {
+  background-color: var(--bg-color-secondary);
+  color: var(--text-color);
+  padding: 0.5em;
+  border-radius: 0; /* Remove rounded corners */
+  font-size: 80%;
+  font-family: var(--font-family-code);
+  white-space: pre; /* Ensure it maintains preformatted text */
+  display: block; /* Ensure it fills the container */
+  overflow-x: auto; /* Allow horizontal scrolling for long lines */
+}
+
+/* ----- Highlight.js ----- */
+.hljs {
+  background-color: var(--bg-color-secondary) !important;
+}
+
 /* ----- Type ----- */
 #typeans {
   border: none;
@@ -117,7 +135,7 @@ code {
   font-family: var(--font-family-code) !important;
   font-size: 18px !important;
   font-variant-ligatures: none;
-  letter-spacing: 0; 
+  letter-spacing: 0;
 }
 
 code#typeans {
@@ -127,7 +145,7 @@ code#typeans {
   font-family: var(--font-family-code) !important;
   font-size: 18px !important;
   font-variant-ligatures: none;
-  letter-spacing: 0; 
+  letter-spacing: 0;
 }
 
 .modern-type {
@@ -136,7 +154,7 @@ code#typeans {
   font-family: var(--font-family-code) !important;
   font-size: 18px !important;
   font-variant-ligatures: none;
-  letter-spacing: 0; 
+  letter-spacing: 0;
 }
 .typeGood {
   color: white;
