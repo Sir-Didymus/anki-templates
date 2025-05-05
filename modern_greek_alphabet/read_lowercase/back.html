@@ -1,0 +1,28 @@
+<!-- Back html for the modern_greek_alphabet note type - card "read_lowercase" -->
+
+<div class="modern">
+  <div class="modern-deck">{{Deck}}</div>
+
+  <div class="modern-center">
+    <div>{{Lowercase}}</div>
+
+    <hr id="answer" />
+
+    <div>Kleines {{Letter-Name-German}}</div>
+
+    {{#Back-Extra}}
+    <div class="modern-back-extra">{{Back-Extra}}</div>
+    {{/Back-Extra}}
+  </div>
+</div>
+
+<script>
+  // Breadcrumbs to current deck
+  var deckEl = document.querySelector(".modern-deck");
+  var subDecks = deckEl.innerHTML.split("::").filter(Boolean);
+  html = [];
+  subDecks.forEach((subDeck) => {
+    html.push("<span class='modern-subdeck'>" + subDeck + "</span>");
+  });
+  deckEl.innerHTML = html.join("&nbsp;/&nbsp;");
+</script>
