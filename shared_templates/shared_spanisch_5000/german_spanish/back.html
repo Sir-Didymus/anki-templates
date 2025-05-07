@@ -1,0 +1,58 @@
+<!-- Back html for the shared_spanisch_5000 note type - card "german_spanish" -->
+
+<div class="deutsch">{{Deutsch}}</div>
+
+<hr id="answer" />
+
+<div class="spanisch">{{Spanisch}}</div>
+
+{{#AudioS}}
+<br />
+{{AudioS}}
+<br />
+{{/AudioS}}
+
+<br />
+
+{{#Beispiel}}
+<a
+  class="hint"
+  href="#"
+  onclick="this.style.display='none';document.getElementById('hint4753594160').style.display='inline-block';return false;"
+  >Seite 3</a
+>
+
+<div id="hint4753594160" class="hint" style="display: none">
+  <div class="s3">
+    {{Beispiel}}
+    {{#Bild3}}
+    <br />
+    Audio Seite 3: {{Bild3}}
+    <br />
+    {{/Bild3}}
+    <br />
+    <div class="einheit" id="einheitContent">
+      Einheit {{Einheit}}, Rang {{ID}}
+    </div>
+  </div>
+</div>
+{{/Beispiel}}
+<br /><br />
+{{Bild4}}
+
+<script>
+  // Plays the first audio element on the page.
+  // This is useed in conjunction with disabling audio autoplay in the Anki settings.
+  // This way, only the first audio of the card played automatically.
+  var elem = document.querySelector(".soundLink, .replaybutton"); // AnkiMobile & AnkiDroid / AnkiDesktop
+  if (elem) {
+    elem.click();
+  } else {
+    window.onload = function () {
+      var elem = document.querySelector(".soundLink, .replaybutton");
+      if (elem) {
+        elem.click();
+      }
+    };
+  }
+</script>

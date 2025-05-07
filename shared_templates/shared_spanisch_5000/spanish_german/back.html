@@ -1,0 +1,43 @@
+<!-- Back html for the shared_spanisch_5000 note type - card "spanish_german" -->
+
+<div class="spanisch">{{Spanisch}}</div>
+
+{{#AudioS}}
+<br />
+{{AudioS}}
+<br />
+{{/AudioS}}
+
+<hr id="answer" />
+
+<div class="deutsch">{{Deutsch}}</div>
+
+<br />
+
+{{#Beispiel}}
+<a
+  class="hint"
+  href="#"
+  onclick="this.style.display='none'; document.getElementById('hint4753594160').style.display='inline-block'; return false;"
+  >Seite 3</a
+>
+
+<div id="hint4753594160" class="hint" style="display: none">
+  <div class="s3">
+    {{Beispiel}}
+    <br />
+    {{#Bild3}}
+    <div class>
+      <br />
+      Audio Seite 3: {{Bild3}}
+    </div>
+    {{/Bild3}}
+    <br />
+    <div class="einheit" id="einheitContent">
+      Einheit {{Einheit}}, Rang {{ID}}
+    </div>
+  </div>
+</div>
+{{/Beispiel}}
+<br /><br />
+{{Bild4}}

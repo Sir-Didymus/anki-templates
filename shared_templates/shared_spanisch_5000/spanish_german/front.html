@@ -1,0 +1,22 @@
+<!-- Front html for the shared_spanisch_5000 note type - card "spanish_german" -->
+
+<div class="spanisch">{{Spanisch}}</div>
+
+{{#AudioS}}
+<br />
+{{AudioS}}
+<br />
+{{/AudioS}}
+
+<br />
+{{BildS}}
+
+<script>
+  // Plays the first audio element on the page.
+  // This is useed in conjunction with disabling audio autoplay in the Anki settings.
+  // This way, only the first audio of the card played automatically.
+  var elem = document.querySelector(".soundLink, .replaybutton"); // AnkiMobile & AnkiDroid / AnkiDesktop
+  if (elem) {
+    elem.click();
+  }
+</script>
