@@ -1,0 +1,23 @@
+<!-- Front html for the shared_us_presidents note type - card "4_name_party" -->
+
+<div class="modern">
+  <div class="modern-head">
+    <div class="modern-deck">{{Deck}}</div>
+  </div>
+  <div class="modern-body">
+    <div class="modern-center">
+      <div>What party did {{Name}} belong to?</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Breadcrumbs to current deck
+  var deckEl = document.querySelector(".modern-deck");
+  var subDecks = deckEl.innerHTML.split("::").filter(Boolean);
+  html = [];
+  subDecks.forEach((subDeck) => {
+    html.push("<span class='modern-subdeck'>" + subDeck + "</span>");
+  });
+  deckEl.innerHTML = html.join("&nbsp;/&nbsp;");
+</script>
