@@ -14,5 +14,5 @@ I have modified these templates to my liking,
 mostly to make them look like my own cards for consistancy.
 
 These card templates are not my own.
-I have them on github for versioncontrol and backup.
+I have them on github for version control and backup.
 If available, the licenses of the respective templates apply.
