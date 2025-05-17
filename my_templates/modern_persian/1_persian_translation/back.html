@@ -1,9 +1,7 @@
 <!-- Back html for the modern_persian note type - card 1_persian-translation -->
 
 <div class="modern">
-  <div class="modern-head">
-    <div class="modern-deck">{{Deck}}</div>
-  </div>
+  <div class="modern-head"></div>
   <div class="modern-body">
     <div class="modern-center">
       <div class="modern-languages-flags"></div>
@@ -19,17 +17,6 @@
     </div>
   </div>
 </div>
-
-<script>
-  // Breadcrumbs to current deck
-  var deckEl = document.querySelector(".modern-deck");
-  var subDecks = deckEl.innerHTML.split("::").filter(Boolean);
-  html = [];
-  subDecks.forEach((subDeck) => {
-    html.push("<span class='modern-subdeck'>" + subDeck + "</span>");
-  });
-  deckEl.innerHTML = html.join("&nbsp;/&nbsp;");
-</script>
 
 <script>
   // Script for setting language flags

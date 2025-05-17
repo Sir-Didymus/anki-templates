@@ -177,9 +177,9 @@ code {
 }
 
 .modern-languages-flags {
-  font-size: 150%;
+  font-size: 130%;
   font-family: var(--font-family-sans);
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 
 /* Persian */
