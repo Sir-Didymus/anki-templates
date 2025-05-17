@@ -165,8 +165,27 @@ code {
 }
 
 /* ---------- LANGUAGE LEARNING ---------- */
-.modern-target {
+.modern-languages-target {
   color: red;
   font-size: 130%;
+  margin: 0.5em 0;
+}
+
+.modern-languages-hint {
+  font-size: 90%;
+  color: #df8e1d;
+}
+
+.modern-languages-flags {
+  font-size: 150%;
+  font-family: var(--font-family-sans);
+  margin-bottom: 0.5em;
+}
+
+/* Persian */
+.modern-languages-persian {
+  font-family: var(font-family-arabic);
+  color: red;
+  font-size: 35px;
   margin: 0.5em 0;
 }

@@ -17,3 +17,13 @@
   });
   deckEl.innerHTML = html.join("&nbsp;/&nbsp;");
 </script>
+
+<script>
+  // Plays the first audio element on the page.
+  // This is useed in conjunction with disabling audio autoplay in the Anki settings.
+  // This way, only the first audio of the card played automatically.
+  var elem = document.querySelector(".soundLink, .replaybutton"); // AnkiMobile & AnkiDroid / AnkiDesktop
+  if (elem) {
+    elem.click();
+  }
+</script>
