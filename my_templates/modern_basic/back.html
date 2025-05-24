@@ -1,15 +1,17 @@
 <!-- Back html for the modern_basic note type -->
 
 <div class="modern">
-  <div class="modern-deck">{{Deck}}</div>
-  <div class="Modern-front">{{Front}}</div>
-
-  <hr id="answer" />
-
-  <div class="modern-back">{{Back}}</div>
-  {{#Back Extra}}
-  <div class="modern-back-extra">{{Back Extra}}</div>
-  {{/Back Extra}}
+  <div class="modern-head">
+    <div class="modern-deck">{{Deck}}</div>
+  </div>
+  <div class="modern-body">
+    {{Front}}
+    <hr id="answer" />
+    <div class="modern-back">{{Back}}</div>
+    {{#Back Extra}}
+    <div class="modern-back-extra">{{Back Extra}}</div>
+    {{/Back Extra}}
+  </div>
 </div>
 
 <script>

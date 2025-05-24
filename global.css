@@ -8,6 +8,8 @@
   --line-height: 1.5;
   --font-size-regular: 20px;
   --font-size-small: 14px;
+  --type-good-color: #40a02b;
+  --type-bad-color: #d20f39;
 }
 
 /* ---------- FONTS ---------- */
@@ -53,6 +55,7 @@
   --subtext-color: #5c5f77;
   --selected-text-bg-color: #7c7f93;
   --italic-color: #7287fd;
+  --type-missed-color: #9ca0b0;
   background-color: var(--bg-color-primary);
 }
 
@@ -66,6 +69,7 @@
   --subtext-color: #bac2de;
   --selected-text-bg-color: #9399b2;
   --italic-color: #b4befe;
+  --type-missed-color: #6c7086;
   background-color: var(--bg-color-primary);
 }
 
@@ -162,6 +166,73 @@ code {
   border-radius: 3px;
   font-size: 80%;
   font-family: var(--font-family-code);
+}
+
+/* ---------- BLOCK CODE ---------- */
+pre code {
+  background-color: var(--bg-color-secondary);
+  color: var(--text-color);
+  padding: 0.5em;
+  border-radius: 0; /* Remove rounded corners */
+  font-size: 80%;
+  font-family: var(--font-family-code);
+  white-space: pre; /* Ensure it maintains preformatted text */
+  display: block; /* Ensure it fills the container */
+  overflow-x: auto; /* Allow horizontal scrolling for long lines */
+}
+
+/* ---------- HIGHLIGHT.JS ---------- */
+.hljs {
+  background-color: var(--bg-color-secondary) !important;
+}
+
+/* ---------- TYPE ---------- */
+#typeans {
+  border: none;
+  border-radius: 0px;
+  background-color: var(--bg-color-secondary);
+  font-family: var(--font-family-code) !important;
+  font-size: 18px !important;
+  font-variant-ligatures: none;
+  letter-spacing: 0;
+}
+
+code#typeans {
+  border: none;
+  border-radius: 0px;
+  background-color: var(--bg-color-secondary);
+  font-family: var(--font-family-code) !important;
+  font-size: 18px !important;
+  font-variant-ligatures: none;
+  letter-spacing: 0;
+}
+
+.modern-type {
+  border: none;
+  border-radius: 0px;
+  font-family: var(--font-family-code) !important;
+  font-size: 18px !important;
+  font-variant-ligatures: none;
+  letter-spacing: 0;
+}
+.typeGood {
+  color: white;
+  background-color: var(--type-good-color);
+}
+.typeBad {
+  color: white;
+  background-color: var(--type-bad-color);
+}
+.typeMissed {
+  color: white;
+  background-color: var(--type-missed-color);
+}
+
+/* ----- CODE TEXT ----- */
+.modern-code-text {
+  border-left: 2px solid #666666;
+  margin-left: 2px;
+  padding-left: calc(1ch - 4px);
 }
 
 /* ---------- LANGUAGE LEARNING ---------- */
