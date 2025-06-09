@@ -228,7 +228,7 @@ code#typeans {
   background-color: var(--type-missed-color);
 }
 
-/* ----- CODE TEXT ----- */
+/* ---------- CODE TEXT ---------- */
 .modern-code-text {
   border-left: 2px solid #666666;
   margin-left: 2px;
@@ -253,10 +253,27 @@ code#typeans {
   margin-bottom: 1em;
 }
 
+.modern-languages-word-class {
+  font-size: 90%;
+  color: var(--subtext-color);
+  margin-bottom: 0.5em;
+}
+
 /* Persian */
 .modern-languages-persian {
   font-family: var(font-family-arabic);
   color: red;
   font-size: 35px;
   margin: 0.5em 0;
+}
+
+/* Sentence Mining */
+.modern-sentence-mining-target-word {
+  font-weight: bold;
+}
+
+.modern-sentence-mining-target-sentence-translation {
+  font-size: 90%;
+  color: var(--subtext-color);
+  margin-bottom: 0.5em;
 }

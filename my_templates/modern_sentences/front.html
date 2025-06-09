@@ -1,19 +1,17 @@
-<!-- Back html for the modern_vocabulary note type - card 1_target_translation -->
+<!-- Front html for the modern_sentences note type -->
 
 <div class="modern">
-  <div class="modern-head"></div>
-  <div class="modern-body">
-    <div class="modern-center">
-      <div class="modern-languages-flags"></div>
-      <div class="modern-target">{{Target}}</div>
-      {{#Audio}}
-      <div class="modern-audio">{{Audio}}</div>
-      {{/Audio}}
-      {{#Word-Class}}
-      <div class="modern-languages-word-class">{{Word-Class}}</div>
-      {{/Word-Class}}
-      <hr id="answer" />
-      <div class="modern-translation">{{Translation}}</div>
+  <div class="modern-center">
+    <div class="modern-languages-flags"></div>
+    <div class="modern-sentence-mining-image">{{Image}}</div>
+    <div class="modern-sentence-mining-target-sentence">
+      <span>{{Target-Sentence}}</span>
+      <span>{{Target-Sentence-Audio}}</span>
+    </div>
+    <br />
+    <div class="modern-sentence-mining-target-word">
+      <span>{{Target-Word}}</span>
+      <span>{{Target-Word-Audio}}</span>
     </div>
   </div>
 </div>
