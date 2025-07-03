@@ -42,6 +42,7 @@
     spanish: "🇪🇸",
     latin: "🏛️🌿",
     finnish: "🇫🇮",
+    english: "🇬🇧",
   };
 
   // Get the flag emojis for the found languages
@@ -55,5 +56,15 @@
       targetFlagEmoji + " → " + translationFlagEmoji;
   } else {
     flagsDisplayElement.innerHTML = "Flag not found for one or both languages.";
+  }
+</script>
+
+<script>
+  // Plays the first audio element on the page.
+  // This is used in conjunction with disabling audio autoplay in the Anki settings.
+  // This way, only the first audio of the card played automatically.
+  var elem = document.querySelector(".soundLink, .replaybutton"); // AnkiMobile & AnkiDroid / AnkiDesktop
+  if (elem) {
+    elem.click();
   }
 </script>
