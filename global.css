@@ -235,6 +235,17 @@ code#typeans {
   padding-left: calc(1ch - 4px);
 }
 
+
+/* ---------- CLOZE ---------- */
+.cloze {
+  font-weight: bold;
+  color: blue;
+}
+
+.nightMode .cloze {
+  color: lightblue;
+}
+
 /* ---------- LANGUAGE LEARNING ---------- */
 .modern-languages-target {
   color: red;
