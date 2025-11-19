@@ -272,7 +272,7 @@ code#typeans {
 
 /* Persian */
 .modern-languages-persian {
-  font-family: var(font-family-arabic);
+  font-family: var(--font-family-arabic);
   color: red;
   font-size: 35px;
   margin: 0.5em 0;
