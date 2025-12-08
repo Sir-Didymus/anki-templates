@@ -1,0 +1,67 @@
+<!-- Back html for the modern_persian_sentence_mining note type -->
+
+<div class="modern">
+  <div class="modern-center">
+    <div class="modern-languages-flags"></div>
+    <div class="modern-sentence-mining-image">{{Image}}</div>
+    <div dir="rtl" class="modern-sentence-mining-target-sentence">
+      <span class="modern-sentence-mining-persian-target-sentece">{{Target-Sentence}}</span>
+      <span>{{Target-Sentence-Audio}}</span>
+    </div>
+    <br />
+    <div dir="rtl" class="modern-sentence-mining-target-word">
+      <span class="modern-sentence-mining-persian-target-word">{{Target-Word}}</span>
+      <span>{{Target-Word-Audio}}</span>
+    </div>
+    <div class="modern-languages-romanization">{{Target-Word-Romanization}}</div>
+    <hr id="answer" />
+    <div class="modern-sentence-mining-target-sentence-translation">
+      {{Target-Sentence-Definition}}
+    </div>
+    <div class="modern-sentence-mining-target-word-definition">
+      {{Target-Word-Definition}}
+    </div>
+  </div>
+</div>
+
+<script>
+  // Script for setting language flags
+  var tagsString = "{{Tags}}";
+  var targetLanguage = "";
+  var translationLanguage = "";
+
+  var allTagsArray = tagsString.split(" "); // Split tags string into an array
+
+  // Loop through tags to find target and translation languages
+  for (var i = 0; i < allTagsArray.length; i++) {
+    if (allTagsArray[i].startsWith("languages::target::")) {
+      targetLanguage = allTagsArray[i].substring("languages::target::".length);
+    } else if (allTagsArray[i].startsWith("languages::translation::")) {
+      translationLanguage = allTagsArray[i].substring(
+        "languages::translation::".length,
+      );
+    }
+  }
+
+  // Language to Flag Emoji Map
+  var languageToEmojiMap = {
+    persian: "🇮🇷",
+    german: "🇩🇪",
+    spanish: "🇪🇸",
+    latin: "🏛️🌿",
+    finnish: "🇫🇮",
+  };
+
+  // Get the flag emojis for the found languages
+  var targetFlagEmoji = languageToEmojiMap[targetLanguage] || ""; // Default to empty if language not in map
+  var translationFlagEmoji = languageToEmojiMap[translationLanguage] || ""; // Default to empty if language not in map
+
+  var flagsDisplayElement = document.querySelector(".modern-languages-flags");
+
+  if (targetFlagEmoji && translationFlagEmoji) {
+    flagsDisplayElement.innerHTML =
+      targetFlagEmoji + " → " + translationFlagEmoji;
+  } else {
+    flagsDisplayElement.innerHTML = "Flag not found for one or both languages.";
+  }
+</script>

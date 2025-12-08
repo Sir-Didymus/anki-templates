@@ -28,15 +28,18 @@
   font-family: "noto_serif_bundled";
   src: url("_noto_serif.ttf");
 }
+
 @font-face {
   /* FONT FAMILY SANS */
   font-family: "noto_sans_bundled";
   src: url("_noto_sans.ttf");
 }
+
 @font-face {
   font-family: "noto_sans_arabic_bundled";
   src: url("_noto_sans_arabic.ttf");
 }
+
 @font-face {
   /* FONT FAMILY CODE */
   font-family: "jetbrains_mono_bundled";
@@ -173,12 +176,16 @@ pre code {
   background-color: var(--bg-color-secondary);
   color: var(--text-color);
   padding: 0.5em;
-  border-radius: 0; /* Remove rounded corners */
+  border-radius: 0;
+  /* Remove rounded corners */
   font-size: 80%;
   font-family: var(--font-family-code);
-  white-space: pre; /* Ensure it maintains preformatted text */
-  display: block; /* Ensure it fills the container */
-  overflow-x: auto; /* Allow horizontal scrolling for long lines */
+  white-space: pre;
+  /* Ensure it maintains preformatted text */
+  display: block;
+  /* Ensure it fills the container */
+  overflow-x: auto;
+  /* Allow horizontal scrolling for long lines */
 }
 
 /* ---------- HIGHLIGHT.JS ---------- */
@@ -215,14 +222,17 @@ code#typeans {
   font-variant-ligatures: none;
   letter-spacing: 0;
 }
+
 .typeGood {
   color: white;
   background-color: var(--type-good-color);
 }
+
 .typeBad {
   color: white;
   background-color: var(--type-bad-color);
 }
+
 .typeMissed {
   color: white;
   background-color: var(--type-missed-color);
@@ -253,6 +263,12 @@ code#typeans {
   margin: 0.5em 0;
 }
 
+.modern-languages-romanization {
+  font-size: 90%;
+  color: var(--subtext-color);
+  margin-bottom: 0.5em;
+}
+
 .modern-languages-hint {
   font-size: 90%;
   color: #df8e1d;
@@ -280,11 +296,25 @@ code#typeans {
 
 /* Sentence Mining */
 .modern-sentence-mining-target-word {
-  font-weight: bold;
+  color: #d9534f;
+}
+
+.modern-sentence-mining-persian-target-sentece b,
+.modern-sentence-mining-persian-target-sentece strong {
+  color: #d9534f;
 }
 
 .modern-sentence-mining-target-sentence-translation {
   font-size: 90%;
   color: var(--subtext-color);
   margin-bottom: 0.5em;
+}
+
+.modern-sentence-mining-persian-target-sentece {
+  font-size: 30px;
+}
+
+.modern-sentence-mining-persian-target-word {
+  font-size: 35px;
+  margin: 0.5em 0;
 }
