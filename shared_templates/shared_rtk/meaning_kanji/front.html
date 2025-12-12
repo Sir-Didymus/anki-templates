@@ -1,0 +1,52 @@
+<!-- Front html for the shared_rtk note type - card "meaning_kanji" -->
+
+<div class="container" lang="de-DE">
+  <main>
+    {{#EUC-JP}}
+    <div class="links low-prio">
+      <a href="http://jisho.org/search/{{Kanji}}">jisho</a>
+      <a href="http://nihongo.monash.edu/cgi-bin/wwwjdic?1MDJ{{EUC-JP}}"
+        >JDIC</a
+      >
+      <a href="https://kanji.koohii.com/study/kanji/{{Kanji}}">koohii</a>
+    </div>
+    {{/EUC-JP}}
+    <span onclick="toggle_language();" id="German">
+      <div class="high meaning_front">{{Bedeutung}}</div>
+    </span>
+    <span onclick="toggle_language();" id="English" style="display: none">
+      <div class="high meaning_front">{{Englische_Bedeutung}}</div>
+    </span>
+  </main>
+  <footer class="low-prio">
+    <div>Lektion {{Lektion}}</div>
+    <div>{{#EUC-JP}} {{Index}} {{/EUC-JP}} {{^EUC-JP}} * {{/EUC-JP}}</div>
+  </footer>
+</div>
+<script>
+  /*change colour of Meaning if it's a primitive  symbol*/
+  	{{^EUC-JP}}
+         var meaning_els = document.getElementsByClassName("meaning_front");
+  for(var i = 0; i < meaning_els.length; i++){
+  	meaning_els[i].style.color=getComputedStyle(document.documentElement).getPropertyValue('--least-important');
+  }
+  	{{/EUC-JP}}
+</script>
+
+<script>
+  /* toggle language when clicking on meaning */
+  	function toggle_language() {
+  	{{#Englische_Bedeutung}}
+  		if(document.getElementById("English").style.display == 'none'){
+  			document.getElementById("English").style.display = "block";
+  			document.getElementById("German").style.display = "none";
+  		}
+  		else{
+  			document.getElementById("German").style.display = "block";
+  			document.getElementById("English").style.display = "none";
+  		}
+  	{{/Englische_Bedeutung}}
+  	{{^EUC-JP}}	document.getElementById("Meaning").style.color=getComputedStyle(document.documentElement).getPropertyValue('--least-important');
+  	{{/EUC-JP}}
+  	}
+</script>

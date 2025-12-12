@@ -1,0 +1,124 @@
+<!-- Back html for the shared_rtk note type - card "meaning_kanji" -->
+
+<div class="container" lang="de-DE">
+  <main>
+    {{#EUC-JP}}
+    <div class="links low-prio">
+      <a href="http://jisho.org/search/{{Kanji}}">jisho</a>
+      <a href="http://nihongo.monash.edu/cgi-bin/wwwjdic?1MDJ{{EUC-JP}}"
+        >JDIC</a
+      >
+      <a href="https://kanji.koohii.com/study/kanji/{{Kanji}}">koohii</a>
+    </div>
+    {{/EUC-JP}}
+
+    <div onclick="toggle_language();" id="German" class="meaning_back meaning">
+      {{Bedeutung}}
+    </div>
+    <div
+      onclick="toggle_language();"
+      id="English"
+      class="meaning_back meaning"
+      lang="en"
+    >
+      {{Englische_Bedeutung}}
+    </div>
+    {{#Primitive}}
+    <div class="low-prio primitives_back">Primitive: {{Primitive}}</div>
+    {{/Primitive}}
+
+    <div class="kanji_back_large">
+      <span class="high jap" id="Kanji" onclick="show_stroke_order();"
+        >{{Kanji}}</span
+      ><span class="strokes low-prio">[{{Strichanzahl}}]</span>
+    </div>
+    {{#Merksatz}}
+    <hr />
+    {{/Merksatz}}
+    <div class="explanation">{{Merksatz}}</div>
+
+    {{#Notiz}}
+    <div class="notes low-prio">
+      <u>Notiz:</u>
+      {{Notiz}}
+    </div>
+    {{/Notiz}} {{#Komposita}}
+    <div id="fill_composites_here" style></div>
+    {{/Komposita}}
+  </main>
+
+  <footer class="low-prio">
+    <div>Lektion {{Lektion}}</div>
+    <div>{{#EUC-JP}} {{Index}} {{/EUC-JP}} {{^EUC-JP}} * {{/EUC-JP}}</div>
+  </footer>
+</div>
+
+<script>
+  /*script to dynamically generate composites layout*/
+  generate_vocab();
+
+  function generate_vocab() {
+    let composites = "{{Komposita}}".split("、");
+    let readings = "{{Komposita_Kana}}".split("、");
+    let meanings = "{{Kompositabedeutung}}".split("、");
+    let readings_index = "{{Index_Lesungen}}".split(", ");
+
+    let start = new String(
+      '<div class=row><span class="compounds med"><ruby><rb>',
+    );
+    acc = " ";
+
+    for (let i = 0; i < composites.length; i++) {
+      acc +=
+        start +
+        composites[i] +
+        "</rb><rt>" +
+        readings[i] +
+        '</rt></ruby><div class="readings_index low-prio">' +
+        readings_index[i] +
+        '</div></span><span class="med comp_meaning" lang=de>' +
+        meanings[i] +
+        "</span></div>";
+    }
+    document.getElementById("fill_composites_here").innerHTML = acc;
+  }
+</script>
+
+<script>
+  /*change colour of Kanji and Meaning if it's a primitive  symbol*/
+  	{{^EUC-JP}}
+  		document.getElementById("Kanji").style.color=getComputedStyle(document.documentElement).getPropertyValue('--least-important');
+  		var meaning_els = document.getElementsByClassName("meaning");
+  		for(var i = 0; i < meaning_els.length; i++){
+  			meaning_els[i].style.color=getComputedStyle(document.documentElement).getPropertyValue('--least-important');
+  		}
+  	{{/EUC-JP}}
+</script>
+<script>
+  /*toggle language on click on meaning */
+  	function toggle_language() {
+  	{{#Englische_Bedeutung}} /* only switch to english meaning if there is one available (primitives don't have it sometimes)*/
+  		if(document.getElementById("English").style.display == 'none'){
+  		document.getElementById("English").style.display = "block";
+  		document.getElementById("German").style.display = "none";
+  		}
+  		else{
+  			document.getElementById("German").style.display = "block";
+  			document.getElementById("English").style.display = "none";
+  		}
+  	{{/Englische_Bedeutung}}
+  	}
+</script>
+
+<script>
+  /* change font type to show stroke order when clicking on kanji */
+  function show_stroke_order() {
+    if (
+      document.getElementById("Kanji").style.fontFamily == "kanji_strokeorder"
+    ) {
+      document.getElementById("Kanji").style.fontFamily = "IPAGothic";
+    } else {
+      document.getElementById("Kanji").style.fontFamily = "kanji_strokeorder";
+    }
+  }
+</script>

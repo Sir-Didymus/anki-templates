@@ -1,0 +1,63 @@
+<!-- Front html for the shared_rtk note type - card "kanji_meaning" -->
+
+<div class="container" lang="de-DE">
+  <main>
+    {{#EUC-JP}}
+    <div class="links low-prio">
+      <a href="http://jisho.org/search/{{Kanji}}">jisho</a>
+      <a href="http://nihongo.monash.edu/cgi-bin/wwwjdic?1MDJ{{EUC-JP}}"
+        >JDIC</a
+      >
+      <a href="https://kanji.koohii.com/study/kanji/{{Kanji}}">koohii</a>
+    </div>
+    {{/EUC-JP}}
+    <div class="kanji_front">
+      <span class="jap high" onclick="show_stroke_order();" id="Kanji"
+        >{{Kanji}}</span
+      ><span class="strokes low-prio">[{{Strichanzahl}}]</span>
+    </div>
+    <div class="compounds_only jap" id="fill_composites_here"></div>
+  </main>
+  <footer class="low-prio">
+    <div>Lektion {{Lektion}}</div>
+    <div>{{#EUC-JP}} {{Index}} {{/EUC-JP}} {{^EUC-JP}} * {{/EUC-JP}}</div>
+  </footer>
+</div>
+<!-- container -->
+
+<script>
+  /* dynamically generate composite layout for front */
+  generate_vocab();
+
+  function generate_vocab() {
+    let composites = "{{Komposita}}".split("、");
+
+    start = '<div class="compounds med"><ruby><rb>';
+    acc = "";
+
+    for (let i = 0; i < composites.length; i++) {
+      acc += start + composites[i] + "</rb></ruby></div>";
+    }
+    document.getElementById("fill_composites_here").innerHTML = acc;
+  }
+</script>
+
+<script>
+  /* display primitives in a greyed out colour */
+  	{{^EUC-JP}}
+  		document.getElementById("Kanji").style.color=getComputedStyle(document.documentElement).getPropertyValue('--least-important');
+  	{{/EUC-JP}}
+</script>
+
+<script>
+  /* show stroke order when clicking on kanji */
+  function show_stroke_order() {
+    if (
+      document.getElementById("Kanji").style.fontFamily == "kanji_strokeorder"
+    ) {
+      document.getElementById("Kanji").style.fontFamily = "IPAGothic";
+    } else {
+      document.getElementById("Kanji").style.fontFamily = "kanji_strokeorder";
+    }
+  }
+</script>

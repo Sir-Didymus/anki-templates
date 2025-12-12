@@ -1,0 +1,224 @@
+@font-face {
+  font-family: "kanji_strokeorder";
+  font-style: normal;
+  font-weight: 400;
+  src: url(_KanjiStrokeOrders.ttf) format("truetype");
+}
+@font-face {
+  font-family: "IPAGothic";
+  font-style: normal;
+  font-weight: 400;
+  src: url(_ipag.ttf) format("truetype");
+}
+:root {
+  --highlight: #5e81ac;
+  --least-important: #4c566a;
+  --highlight2: #bf616a;
+  --slight_highlight: #434c5e;
+  --default: #2e3440;
+  --hint: #5e81ac;
+  --dark_hint: #b48ead;
+  --dark_default: #e5e9f0;
+  --dark_highlight: #5e81ac;
+  --dark_slight_highlight: #88c0d0;
+  --japfont: IPAGothic;
+  --sans-serif: Helvetica, Arial, Verdana, sans-serif;
+  --prefer-jap: Helvetica, var(--japfont), sans-serif;
+}
+.low-prio,
+.nightMode .low-prio {
+  color: var(--least-important);
+  font-size: 2rem;
+}
+html {
+  font-size: 10px;
+}
+.card {
+  max-width: 800px;
+  hyphens: auto;
+  margin: 0 auto;
+  font-family: var(--sans-serif);
+  color: var(--default);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+.jap {
+  font-family: var(--japfont);
+}
+
+main {
+  flex-grow: 1;
+  padding: 20px;
+  padding-top: 0;
+}
+
+.kanji_front {
+  height: 2ch;
+  margin-top: 25vh;
+  margin-bottom: 5vh;
+  font-size: 12rem;
+}
+.high {
+  color: var(--highlight);
+}
+.nightMode .high {
+  color: var(--dark_highlight);
+}
+.strokes {
+  font-family: var(--sans-serif);
+  font-size: 2rem;
+  color: var(--least-important);
+}
+.med {
+  color: var(--slight_highlight);
+}
+.nightMode .med {
+  color: var(--dark_slight_highlight);
+}
+#English {
+  display: none;
+}
+.kanji_back_large {
+  font-size: 7rem;
+  padding-top: 2rem;
+  height: 2ch;
+}
+
+.kanji_back_small {
+  font-size: 5rem;
+  height: 2ch;
+}
+
+.nightMode #composites_meaning {
+  color: var(--dark_slight_highlight);
+}
+
+.comp_meaning {
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+.row {
+  display: grid;
+  align-items: left;
+  width: 100%;
+  grid-template-columns: 3fr 7fr;
+  margin-top: 1rem;
+  grid-column-gap: 2rem;
+}
+
+ruby {
+  ruby-position: over;
+}
+.compounds {
+  white-space: nowrap;
+  font-size: 4rem;
+}
+
+.compounds_only {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.explanation {
+  font-size: 2rem;
+}
+.explanation i {
+  font-style: normal;
+  color: var(--highlight2);
+}
+.explanation b {
+  font-weight: normal;
+  color: var(--highlight);
+}
+.nightMode .explanation b {
+  color: var(--dark_highlight);
+}
+.notes {
+  font-size: 1.6rem;
+  font-family: var(--prefer-jap);
+}
+.notes a {
+  text-decoration: underline;
+}
+.notes u {
+  font-size: 2rem;
+  text-decoration: none;
+}
+.meaning_front {
+  font-size: 4rem;
+  margin-top: 20vh;
+}
+.meaning_back_card1 {
+  font-size: 4rem;
+  margin: 0;
+}
+.meaning_back {
+  font-size: 25px;
+  font-family: var(--prefer-jap);
+  color: var(--slight_highlight);
+  padding-top: 10px;
+}
+.nightMode .meaning_back {
+  color: var(--dark_slight_highlight);
+}
+.primitives_back {
+  font-family: var(--prefer-jap);
+  font-size: 2rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2ch;
+}
+.links a {
+  text-decoration: none;
+  font-size: 2rem;
+  margin-top: 2px;
+}
+.readings_index {
+  margin-top: -0.7rem;
+  font-size: 1.8rem;
+}
+
+.nightMode .readings_index {
+  color: var(--least-important);
+}
+/* ANDROID SETTINGS */
+.android .container {
+  min-height: 97vh; /*AnkiDroid seems to calculate vh with area below buttons*/
+  min-height: 100svh;
+}
+.android p.kanji {
+  font-size: 120px;
+}
+.android .nightMode {
+  background-color: black;
+}
+.android p.kanji_card2 {
+  font-size: 120px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 1rem;
+  padding-bottom: 1rem;
+}
+a {
+  color: inherit;
+}
+a:hover,
+a:active {
+  text-decoration: underline;
+  color: var(--highlight2);
+}
