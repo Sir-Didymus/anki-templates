@@ -51,6 +51,10 @@ html {
   font-family: var(--japfont);
 }
 
+.jap-stroke {
+  font-family: "kanji_strokeorder";
+}
+
 main {
   flex-grow: 1;
   padding: 20px;
