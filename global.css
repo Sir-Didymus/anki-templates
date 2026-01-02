@@ -311,10 +311,12 @@ code#typeans {
 }
 
 .modern-sentence-mining-persian-target-sentece {
+  font-family: var(--font-family-arabic);
   font-size: 30px;
 }
 
 .modern-sentence-mining-persian-target-word {
+  font-family: var(--font-family-arabic);
   font-size: 35px;
   margin: 0.5em 0;
 }
