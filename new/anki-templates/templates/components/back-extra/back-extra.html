@@ -1,0 +1,8 @@
+<!-- 'back-extra' component displaying additional information on the backside of the card -->
+[% macro back_extra(field) %]
+{{#[[ field ]]}}
+<div class="modern-back-extra">
+  {{[[ field ]]}}
+</div>
+{{/[[ field ]]}}
+[% endmacro %]

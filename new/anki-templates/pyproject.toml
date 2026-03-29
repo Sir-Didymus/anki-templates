@@ -1,0 +1,16 @@
+[project]
+name = "anki-templates"
+version = "0.1.0"
+description = "My personal Anki templates"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "jinja2>=3.1.6",
+    "libsass>=0.23.0",
+]
+
+[project.scripts]
+anki-build = "anki_templates.build:main"
+
+[tool.uv]
+package = true

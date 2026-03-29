@@ -1,0 +1,14 @@
+<script>
+  function autoplay() {
+    var elem = document.querySelector(
+      ".modern-autoplay .soundLink, .modern-autoplay .replaybutton"
+    );
+    if (elem) {
+      elem.click();
+    } else {
+      setTimeout(autoplay, 50);
+    }
+  }
+
+  autoplay();
+</script>

@@ -1,0 +1,29 @@
+/* CSS for the 'modern_major_system' note-type */
+
+@import "base/base";
+@import "deck-info/deck-info";
+@import "replay-button/replay-button";
+@import "back-extra/back-extra";
+
+.modern-body {
+  text-align: center;
+}
+
+.modern-major-system-ipa {
+  font-size: var(--font-size-large);
+}
+
+.modern-major-system-numeral {
+  font-size: var(--font-size-large);
+  font-weight: bold;
+}
+
+.modern-back-extra {
+  text-align: left;
+}
+
+.modern-major-system-consonants {
+  font-size: var(--font-size-medium);
+  font-family: var(--font-family-sans);
+  line-height: 1.8;
+}

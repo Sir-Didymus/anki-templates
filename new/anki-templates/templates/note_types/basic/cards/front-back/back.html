@@ -1,0 +1,16 @@
+<!-- Back html for the 'modern_basic' note type -->
+
+[% extends "components/base/base.html" %]
+
+[% block header %]
+[% include "components/deck-info/deck-info.html" %]
+[% endblock %]
+
+[% block body %]
+<div class="modern-basic-front">{{Front}}</div>
+<hr id="answer" />
+<div class="modern-basic-back">{{Back}}</div>
+{{#Back Extra}}
+<div class="modern-back-extra">{{Back Extra}}</div>
+{{/Back Extra}}
+[% endblock %]

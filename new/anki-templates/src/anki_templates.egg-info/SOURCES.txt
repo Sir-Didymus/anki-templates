@@ -1,0 +1,9 @@
+pyproject.toml
+src/anki_templates/__init__.py
+src/anki_templates/build.py
+src/anki_templates.egg-info/PKG-INFO
+src/anki_templates.egg-info/SOURCES.txt
+src/anki_templates.egg-info/dependency_links.txt
+src/anki_templates.egg-info/entry_points.txt
+src/anki_templates.egg-info/requires.txt
+src/anki_templates.egg-info/top_level.txt

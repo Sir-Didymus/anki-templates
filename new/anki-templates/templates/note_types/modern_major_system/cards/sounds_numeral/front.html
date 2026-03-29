@@ -1,0 +1,15 @@
+<!-- Front html for the 'modern_major_system' note type - card type "sound_numeral" -->
+
+[% extends "components/base/base.html" %]
+
+[% block header %]
+[% include "components/deck-info/deck-info.html" %]
+[% endblock %]
+
+[% block body %]
+<div class="modern-major-system-ipa">{{Sound-IPA}}</div>
+<div class="modern-major-system-audio modern-autoplay">{{Audio-IPA}}</div>
+<h4>Konsonanten</h4>
+<div class="modern-major-system-consonants">{{Consonants}}</div>
+[% include "components/autoplay/autoplay.html" %]
+[% endblock %]

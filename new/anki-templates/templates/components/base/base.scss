@@ -1,0 +1,85 @@
+/* --------------------------------------------- */
+/* Shared styling for the Anki `.card` container */
+/* --------------------------------------------- */
+
+/* ---------- GENERAL SETTINGS ---------- */
+:root {
+  --max-width: 600px;
+  --line-height: 1.5;
+  --font-size-large: 28px;
+  --font-size-regular: 20px;
+  --font-size-small: 14px;
+}
+
+/* ---------- FONTS ---------- */
+:root {
+  --font-family-serif: "Noto Serif", Georgia, serif, "noto_serif_bundled";
+  --font-family-sans: "Noto Sans", Arial, sans-serif, "noto_sans_bundled";
+}
+
+/* ---------- CUSTOM FONTS ---------- */
+@font-face {
+  /* FONT FAMILY SERIF */
+  font-family: "noto_serif_bundled";
+  src: url("_noto_serif.ttf");
+}
+
+@font-face {
+  /* FONT FAMILY SANS */
+  font-family: "noto_sans_bundled";
+  src: url("_noto_sans.ttf");
+}
+
+.card {
+  /* ---------- COLORS ---------- */
+
+  /* LIGHT MODE */
+  --bg-color-primary: ##eff1f5;
+  --bg-color-secondary: #ccd0da;
+  --divider-bg-color: #7c7f93;
+  --text-color: #4c4f69;
+  --text-color-subtle: #8c8fa1;
+  --subtext-color: #5c5f77;
+  --selected-text-bg-color: #7c7f93;
+  --italic-color: #7287fd;
+  --type-missed-color: #9ca0b0;
+  --type-good-color: #40a02b;
+  --type-bad-color: #d20f39;
+  background-color: var(--bg-color-primary);
+
+  &.nightMode {
+    /* DARK MODE */
+    --bg-color-primary: #1e1e2e;
+    --bg-color-secondary: #313244;
+    --divider-bg-color: #9399b2;
+    --text-color: #cdd6f4;
+    --text-color-subtle: #7f849c;
+    --subtext-color: #bac2de;
+    --selected-text-bg-color: #9399b2;
+    --italic-color: #b4befe;
+    --type-missed-color: #6c7086;
+    --type-good-color: #40a02b;
+    --type-bad-color: #d20f39;
+    background-color: var(--bg-color-primary);
+  }
+
+  /* ---------- CARD SETTINGS ---------- */
+  margin: clamp(20px, 8vh, 40px) auto;
+  padding: 0 20px;
+  text-align: left;
+  max-width: var(--max-width);
+  background-color: var(--bg-color-primary);
+  color: var(--text-color);
+  font-family: var(--font-family-serif);
+  font-size: var(--font-size-regular);
+  line-height: var(--line-height);
+
+  hr {
+    /* ---------- DIVIDER ---------- */
+    all: unset;
+    display: block;
+    margin: clamp(0.75em, 6vh, 1.5em) 0;
+    height: 1.5px;
+    background-color: var(--divider-bg-color);
+  }
+}

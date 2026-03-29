@@ -1,0 +1,24 @@
+/* --------------------------------- */
+/* CSS for the 'deck-info' component */
+/* --------------------------------- */
+
+/* ---------- DECK INDICATOR ---------- */
+.modern-deck-info {
+  margin-bottom: 2em;
+  display: flex;
+  white-space: nowrap;
+  color: var(--subtext-color);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-small);
+}
+
+.mobile.modern-deck-info {
+  margin: 1em;
+}
+
+.modern-deck-info-subdeck {
+  text-decoration: underline;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+

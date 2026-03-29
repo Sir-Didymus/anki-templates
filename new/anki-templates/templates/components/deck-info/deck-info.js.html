@@ -1,0 +1,10 @@
+<script>
+  // Breadcrumbs to current deck
+  var deckEl = document.querySelector(".modern-deck-info");
+  var subDecks = deckEl.innerHTML.split("::").filter(Boolean);
+  html = [];
+  subDecks.forEach((subDeck) => {
+    html.push("<span class='modern-deck-info-subdeck'>" + subDeck + "</span>");
+  });
+  deckEl.innerHTML = html.join("&nbsp;/&nbsp;");
+</script>

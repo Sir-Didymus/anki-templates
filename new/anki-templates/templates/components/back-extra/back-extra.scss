@@ -1,0 +1,10 @@
+/* --------------------------------- */
+/* CSS for the 'back-extra' component */
+/* --------------------------------- */
+
+.modern-back-extra {
+  color: var(--subtext-color);
+  font-family: var(--font-family-sans);
+  font-size: 90%;
+  margin-top: clamp(1.5em, 11vh, 3em);
+}
