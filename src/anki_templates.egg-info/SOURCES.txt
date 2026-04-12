@@ -1,3 +1,5 @@
+LICENSE.md
+README.md
 pyproject.toml
 src/anki_templates/__init__.py
 src/anki_templates/build.py

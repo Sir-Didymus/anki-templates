@@ -1,6 +1,5 @@
-/* -------------------------------- */
-/* Styling for Anki's replay button */
-/* -------------------------------- */
+/* BEGIN CSS for the 'replay-button' component
+   Styling for Anki's replay button */
 
 .replay-button svg circle {
   fill: transparent;
@@ -10,3 +9,5 @@
 .replay-button svg path {
   fill: var(--text-color-subtle);
 }
+
+/* END CSS for the 'replay-button' component */
