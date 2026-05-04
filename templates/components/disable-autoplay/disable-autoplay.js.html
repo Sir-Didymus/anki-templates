@@ -1,0 +1,15 @@
+<!-- BEGIN JS for the 'disable-autoplay' component -->
+<script>
+  function autoplay() {
+    var elem = document.querySelector(
+      ".modern-disable-autoplay .soundLink, .modern-disable-autoplay .replaybutton"
+    );
+    if (elem) {
+      elem.click();
+    } else {
+      setTimeout(autoplay, 50);
+    }
+  }
+  autoplay()
+</script>
+<!-- END JS for the 'disable-autoplay' component -->

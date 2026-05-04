@@ -1,0 +1,22 @@
+<!-- Back html for the 'modern_sentence_mining' note type -->
+
+[% extends "components/base/base.html" %]
+
+[% block header %]
+[% include "components/deck-info/deck-info.html" %]
+[% include "components/disable-autoplay/disable-autoplay.html" %]
+[% endblock %]
+
+[% block body %]
+  <div class="modern-sentence-mining-word">{{Word}}</div>
+  <div class="modern-sentence-mining-audio">{{Word-Audio}}</div>
+  <hr />
+  <div class="modern-sentence-mining-definition">{{Definition}}</div>
+  <hr />
+  <div class="modern-sentence-mining modern-sentence-mining-color-target-word">
+    {{Sentence}}</div>
+  <div class="modern-sentence-mining-sentence-meaning">
+    {{Sentence-Meaning}}
+  </div>
+  <div class="modern-sentence-mining-audio">{{Sentence-Audio}}</div>
+[% endblock %]

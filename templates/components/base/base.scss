@@ -82,6 +82,20 @@
     height: 1.5px;
     background-color: var(--divider-bg-color);
   }
+
+  // ---------- MISC ---------- */
+  .hidden {
+    visibility: hidden;
+  }
+
+  .hidden-and-no-space {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none
+  }
 }
 
 /* END CSS for the 'base' component */

@@ -1,0 +1,38 @@
+/* CSS for the 'modern_sentence_mining' note-type */
+
+@import "base/base";
+@import "deck-info/deck-info";
+@import "replay-button/replay-button";
+
+.card {
+  /* LIGHT MODE */
+  --target-word-color: #229a3e;
+}
+
+.card.nightMode {
+  /* DARK MODE */
+  --target-word-color: #a6e3a1;
+}
+
+.modern-body {
+  text-align: left;
+}
+
+.modern-sentence-mining-sentence-meaning {
+  font-size: var(--font-size-medium);
+}
+
+.modern-sentence-mining-definition {
+  font-size: var(--font-size-medium);
+}
+
+.modern-sentence-mining-color-target-word b,
+.modern-sentence-mining-color-target-word strong {
+  color: var(--target-word-color);
+  font-weight: normal;
+}
+
+.modern-sentence-mining-word {
+  font-size: var(--font-size-large);
+  color: var(--target-word-color);
+}
