@@ -15,8 +15,11 @@
   <hr />
   <div class="modern-sentence-mining modern-sentence-mining-color-target-word">
     {{Sentence}}</div>
-  <div class="modern-sentence-mining-sentence-meaning">
-    {{Sentence-Meaning}}
-  </div>
   <div class="modern-sentence-mining-audio">{{Sentence-Audio}}</div>
+  {{#Sentence-Meaning}}
+    <hr />
+    <div class="modern-sentence-mining-sentence-meaning">
+      {{Sentence-Meaning}}
+    </div>
+  {{/Sentence-Meaning}}
 [% endblock %]
