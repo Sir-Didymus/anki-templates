@@ -96,6 +96,45 @@
     opacity: 0;
     pointer-events: none
   }
+
+  // ---------- TABLES ---------- */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1.5em 0;
+    color: var(--text-color);
+    font-size: var(--font-size-regular);
+
+    th,
+    td {
+      padding: 10px 14px;
+      text-align: left;
+    }
+  }
+
+  table,
+  table.table-column-only {
+    border: none;
+
+    thead tr,
+    th {
+      border-bottom: 2px solid var(--divider-bg-color);
+    }
+
+    th:not(:last-child),
+    td:not(:last-child) {
+      border-right: 1px solid var(--divider-bg-color);
+    }
+  }
+
+  table.table-full {
+    border: 1px solid var(--divider-bg-color);
+
+    th,
+    td {
+      border: 1px solid var(--divider-bg-color);
+    }
+  }
 }
 
 /* END CSS for the 'base' component */

@@ -1,0 +1,11 @@
+<!-- Back html for the 'modern_basic' note type -->
+
+[% extends "components/base/base.html" %]
+
+[% block header %]
+[% include "components/deck-info/deck-info.html" %]
+[% endblock %]
+
+[% block body %]
+<div class="modern-basic-front">{{cloze:Text}}</div>
+[% endblock %]
